@@ -1,0 +1,70 @@
+[
+    {
+        "orderHeader":{
+            "ordH_id": "9",
+            "ordH_refNumber": "10987654",
+            "ordH_merchantID": "2", 
+            "ordH_customerId": "2",
+            "ordH_dateTimeCreated": "2021-05-14 01:19:43",
+            "ordH_discount": "1",
+            "ordH_totalAmount": "1563.9",
+            "ordH_deliveryFee": "100.5",
+            "ordH_status": "1",
+            "ordH_contactNumber": "09876565432",
+            "ordH_processedBy": "0",
+            "ordH_processTime": "0000-00-00 00:00:00",
+            "ordH_dispatchedBy": "0",
+            "ordH_dispatchTime": "0000-00-00 00:00:00.00000",
+            "ordH_deliveredBy": "0",
+            "ordH_deliveryTime": "0000-00-00 00:00:00.00000",
+            "ordH_paymentMode": "1",
+            "ordH_deliveryAddress": "10",
+            "ordH_userCurrentLatitude": "8.51233",
+            "ordH_userCurrentLongitude": "124.61795",
+            "ordH_notes": "wala lang",
+            "ordH_flag": "0",
+            "DateLastUpdate": "2021-05-14 00:00:00",
+            "ordH_receivedBy": "",
+            "ordH_receivedTime": "0000-00-00 00:00:00",
+            "cust_name": "Eduardo Pagalpok",
+            "del_address": "Carmen, Cagayan de Oro City"
+        }
+    },
+        {
+        "orderDetails":[
+            {
+                "ordD_id": "10",
+                "ordD_orderHeader": "9",
+                "ordD_productId": "2",
+                "ordD_qty": "2",
+                "ordD_price": "12",
+                "ordD_discount": "0",
+                "ordD_amount": "24",
+                "ordD_Status": "1",
+                "DateLastUpdate": "2021-05-14 00:00:00"
+            },
+            {
+                "ordD_id": "11",
+                "ordD_orderHeader": "9",
+                "ordD_productId": "3",
+                "ordD_qty": "5",
+                "ordD_price": "10",
+                "ordD_discount": "0",
+                "ordD_amount": "50",
+                "ordD_Status": "1",
+                "DateLastUpdate": "2021-05-14 00:00:00"
+            },
+            {
+                "ordD_id": "12",
+                "ordD_orderHeader": "9",
+                "ordD_productId": "4",
+                "ordD_qty": "2",
+                "ordD_price": "12",
+                "ordD_discount": "0",
+                "ordD_amount": "24",
+                "ordD_Status": "1",
+                "DateLastUpdate": "2021-05-14 00:00:00"
+            }
+        ]
+    }
+]

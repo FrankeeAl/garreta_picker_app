@@ -1,0 +1,737 @@
+{
+  "bottomsShelf" : {
+    "6YQrUZPRMSYa9NhkEva6" : {
+      "code" : "Be-S",
+      "items" : "Shorts",
+      "order" : 1
+    },
+    "YBtB4jGRTnsNfWXBGikj" : {
+      "code" : "Bb-S",
+      "items" : "Skirts",
+      "order" : 2
+    },
+    "lLz4lVZnsYus0HGP6jf7" : {
+      "code" : "Bd-P",
+      "items" : "Pajama",
+      "order" : 3
+    },
+    "qGZRSIVoRsruWl2wz5Gj" : {
+      "code" : "Bc-J",
+      "items" : "Jeans",
+      "order" : 4
+    },
+    "qZlyoz2RdwG9LUEHGKxU" : {
+      "code" : "Ba-B",
+      "items" : "Bloomers",
+      "order" : 5
+    }
+  },
+  "categories" : {
+    "8E3zsPEVZaPHjApkfhsA" : {
+      "imgUrl" : "https://bit.ly/3bPRqiJ",
+      "title" : "Grocery"
+    },
+    "KEfTifC7FBjHhK68w0Cq" : {
+      "imgUrl" : "https://bit.ly/3qoJtJW",
+      "title" : "Computer Electronics"
+    },
+    "Ocv2Bznc1cFfmKxcST2s" : {
+      "imgUrl" : "https://bit.ly/3ETGHjH",
+      "title" : "Clothing"
+    }
+  },
+  "clothes" : {
+    "bottoms" : {
+      "DGdQPuHqEkIVGWmAh83X" : {
+        "title" : "Bloomers"
+      },
+      "Ij2pqCTUTm2cHuSJxdKu" : {
+        "title" : "Pajama"
+      },
+      "c8lXZZ44x9m7a32xCekY" : {
+        "title" : "Shorts"
+      },
+      "nOFxLvO3u103oJhitwhB" : {
+        "title" : "Skirts"
+      },
+      "utGVMm26BfjGcxlr8Izg" : {
+        "title" : "Jeans"
+      }
+    },
+    "hats" : {
+      "DDwniRebCNtYA8VZkGml" : {
+        "title" : "Bonnets"
+      },
+      "iPU9JajgNqpyRFbBvzku" : {
+        "title" : "Baseball Caps"
+      },
+      "lkwv7vvMcFEwtfGsAIpF" : {
+        "title" : "Beanies"
+      },
+      "pqZMeoEo7HDRuYtgs8TM" : {
+        "title" : "Cowboy Hats"
+      }
+    },
+    "tops" : {
+      "5Svv0AytRLNS9AL05g6Z" : {
+        "title" : "Shirts"
+      },
+      "DkaSvPRApVKy7RyJx5Cv" : {
+        "title" : "Crop Top"
+      },
+      "NKw3qlsndVlR23kiEFMs" : {
+        "title" : "Blouse"
+      },
+      "TsYjQs7Bjb2uJPwlTkmd" : {
+        "title" : "Tube Top"
+      },
+      "WKXjoA1opTMNurunp9c6" : {
+        "title" : "Tank Top"
+      },
+      "zazM50fdcmmzDPbPKL79" : {
+        "title" : "Sweater"
+      }
+    }
+  },
+  "customers" : {
+    "1IDUKBayFTL0eh1kAAVw" : {
+      "cust_address" : "Bonbon, Cagayan de Oro City",
+      "cust_birthDate" : "1990-04-23",
+      "cust_contactNumber" : "09278965144",
+      "cust_email" : "tulfo@yahoo.com",
+      "cust_gender" : "male",
+      "cust_name" : "Ben Tulfo",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "@bentul199",
+      "cust_registrationDate" : "2021-08-14",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    },
+    "2x6TgciMmL3dwBDrQxEB" : {
+      "cust_address" : "Macasandig, Cagayan de Oro City",
+      "cust_birthDate" : "1999-01-15",
+      "cust_contactNumber" : "09918857896",
+      "cust_email" : "tabla@yahoo.com",
+      "cust_gender" : "female",
+      "cust_name" : "Rose Habla",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "@tablado05",
+      "cust_registrationDate" : "2021-10-6",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    },
+    "B4ahJwm2cSK3nL2bMdBq" : {
+      "cust_address" : "bulua, cagayan de oro city",
+      "cust_birthDate" : "1992-08-21",
+      "cust_contactNumber" : "09265844562",
+      "cust_email" : "benj@yahoo.com",
+      "cust_gender" : "male",
+      "cust_name" : "Benjamin Button",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "benj156",
+      "cust_registrationDate" : "2021-03-31",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    },
+    "EKeGbrkYJPNSdfiNICsR" : {
+      "cust_address" : "Carmen, Cagayan de Oro City",
+      "cust_birthDate" : "1996-09-11",
+      "cust_contactNumber" : "09916587845",
+      "cust_email" : "fred@yahoo.com",
+      "cust_gender" : "male",
+      "cust_name" : "Freddie Smith",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "@caloy160",
+      "cust_registrationDate" : "2021-04-11",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    },
+    "ekxVLbsAOHKUGnckZEhW" : {
+      "cust_address" : "Iponan, Cagayan de Oro City",
+      "cust_birthDate" : "1993-02-29",
+      "cust_contactNumber" : "09271547896",
+      "cust_email" : "mahal@yahoo.com",
+      "cust_gender" : "female",
+      "cust_name" : "Mercham Lokar",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "@Biyaya2005",
+      "cust_registrationDate" : "2021-09-16",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    },
+    "iDCWeKiAuwy86VXpfCgK" : {
+      "cust_address" : "Lumbia, Cagayan de Oro City",
+      "cust_birthDate" : "1996-09-13",
+      "cust_contactNumber" : "09278587644",
+      "cust_email" : "mutya@yahoo.com",
+      "cust_gender" : "female",
+      "cust_name" : "Donita Mutya",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "@LoveKoTo21",
+      "cust_registrationDate" : "2021-10-24",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    },
+    "yhFUQu3Ehk6JtAmbozEt" : {
+      "cust_address" : "Bayabas, Cagayan de Oro City",
+      "cust_birthDate" : "1990-03-21",
+      "cust_contactNumber" : "09358698547",
+      "cust_email" : "cora@yahoo.com",
+      "cust_gender" : "female",
+      "cust_name" : "Corazon de Jesus",
+      "cust_numberOfCancelledOrders" : 0,
+      "cust_numberOfOrders" : 0,
+      "cust_password" : "@carz603",
+      "cust_registrationDate" : "2021-05-21",
+      "cust_reputation" : 0,
+      "cust_status" : 1
+    }
+  },
+  "hatsShelf" : {
+    "JEJAT6J4m8CDDhIY8VVt" : {
+      "code" : "Hb-B",
+      "items" : "Beanies",
+      "order" : 1
+    },
+    "Lez3GFpg5hzT27k1rwkL" : {
+      "code" : "Hc-B",
+      "items" : "Bonnets",
+      "order" : 2
+    },
+    "pwB2VMQxJvDfeO9Go826" : {
+      "code" : "Ha-B",
+      "items" : "BaseBall Caps",
+      "order" : 3
+    },
+    "qHVssDH47PlCOe5LbHC7" : {
+      "code" : "Hd-C",
+      "items" : "Cowboy Hat",
+      "order" : 4
+    }
+  },
+  "merchants" : {
+    "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2" : {
+      "businessAddress" : "GJ3M+43W, Cagayan de Oro, Misamis Oriental",
+      "businessHours" : "Open 8:00am Closed 6:00pm",
+      "contactNumber" : "09758154875",
+      "contactPerson" : "Malou Wang",
+      "dateRegistered" : "2021-10-04 15:34:19.209183",
+      "emailAddress" : "ourstore@gmail.com",
+      "kmAllocated" : "5Km",
+      "latitude" : "8.488272",
+      "longitude" : "124.6111141",
+      "rating" : "5",
+      "smsNumber" : "09916587458",
+      "status" : "1",
+      "title" : "OurStore Merchandise",
+      "token" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2"
+    },
+    "jtUcM2RrUeOvIhk3NYs5D4bTiQN2" : {
+      "businessAddress" : "West Coastal Road, Cagayan de Oro, 9000, Philippines",
+      "businessHours" : "Open 8:00am Closed 6:00pm",
+      "contactNumber" : "09917598245",
+      "contactPerson" : "Saba Kang",
+      "dateRegistered" : "2021-10-07 14:34:30.209183",
+      "emailAddress" : "baratora@gmail.com",
+      "kmAllocated" : "5Km",
+      "latitude" : "8.512779",
+      "longitude" : "124.627690",
+      "rating" : "5",
+      "smsNumber" : "09916458512",
+      "status" : "1",
+      "title" : "BaratoRa Merchandise",
+      "token" : "jtUcM2RrUeOvIhk3NYs5D4bTiQN2"
+    }
+  },
+  "orders" : {
+    "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2" : {
+      "-MlPM7in4Uo0FFi5YG2J" : {
+        "amount" : 2709.40,
+        "cust_contactNumber" : "09278965144",
+        "cust_id" : "1IDUKBayFTL0eh1kAAVw",
+        "cust_name" : "Ben Tulfo",
+        "dateTime" : "2021-10-07T18:46:25.847835",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MkwXMJHjtxhzH1EXeNe",
+          "price" : 899.95,
+          "quantity" : 2,
+          "title" : "Tattered Jeans"
+        }, {
+          "id" : "-Ml6t6cfUG7Xv2MtiWnC",
+          "price" : 649.75,
+          "quantity" : 1,
+          "title" : "Lee Tee"
+        },{
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        } ]
+      },
+      "-Mlzl-_U2yh0eD1TciVh" : {
+        "amount" :5598.00,
+        "cust_contactNumber" : "09265844562",
+        "cust_id" : "B4ahJwm2cSK3nL2bMdBq",
+        "cust_name" : "Benjamin Button",
+        "dateTime" : "2021-10-15T01:05:20.056729",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MlLU9qfyZ0aj8X5UwyS",
+          "price" : 699.75,
+          "quantity" : 4,
+          "title" : "BHPC Poloshirt"
+        }, {
+          "id" : "-MlAkMiLONJ43_hBaRC6",
+          "price" : 129.75,
+          "quantity" : 1,
+          "title" : "TankTops"
+        }, {
+          "id" : "-MlAjz3EKEV8aNumGK6W",
+          "price" : 574.75,
+          "quantity" : 1,
+          "title" : "Red Tee"
+        }, {
+          "id" : "-MlAjz3EKEV8aNumGK6W",
+          "price" : 649.75,
+          "quantity" : 1,
+          "title" : "Lee Tee"
+        }, {
+          "id" : "-MlLszoHvWek8_AOnjUQ",
+          "price" : 1999.75,
+          "quantity" : 1,
+          "title" : "Bermuda Shorts"
+        },{
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        }]
+      },
+      "-Mn1fDaC8d9B3kL3ubSH" : {
+        "amount" : 2389.00,
+        "cust_contactNumber" : "09918857896",
+        "cust_id" : "2x6TgciMmL3dwBDrQxEB",
+        "cust_name" : "Rose Habla",
+        "dateTime" : "2021-10-28T00:54:43.761749",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MlAkMiLONJ43_hBaRC6",
+          "price" : 129.50,
+          "quantity" : 1,
+          "title" : "TankTops"
+        }, {
+          "id" : "-MlLszoHvWek8_AOnjUQ",
+          "price" : 1999.75,
+          "quantity" : 1,
+          "title" : "Bermuda Shorts"
+        },{
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        } ]
+      },
+      "-Mn1fFfYo2fmmRHxD0yZ" : {
+        "amount" :959.50,
+        "cust_contactNumber" : "09916587845",
+        "cust_id" : "EKeGbrkYJPNSdfiNICsR",
+        "cust_name" : "Freddie Smith",
+        "dateTime" : "2021-10-28T00:54:52.284362",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MlLU9qfyZ0aj8X5UwyS",
+          "price" : 699.75,
+          "quantity" : 1,
+          "title" : "BHPC Poloshirt"
+        },{
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        }]
+      },
+      "-Mn1fJ8mlUPjbfYpR7sY" : {
+        "amount" : 2834.25,
+        "cust_contactNumber" : "09358698547",
+        "cust_id" : "yhFUQu3Ehk6JtAmbozEt",
+        "cust_name" : "Corazon de Jesus",
+        "dateTime" : "2021-10-28T00:55:06.496475",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        }, {
+          "id" : "-MlAjz3EKEV8aNumGK6W",
+          "price" : 574.75,
+          "quantity" : 1,
+          "title" : "Red Tee"
+        }, {
+          "id" : "-MlLszoHvWek8_AOnjUQ",
+          "price" : 1999.75,
+          "quantity" : 1,
+          "title" : "Bermuda Shorts"
+        }  ]
+      },
+      "-Mn1fMktCVcPTCPUYT_j" : {
+        "amount" : 1559.25,
+        "cust_contactNumber" : "09278587644",
+        "cust_id" : "iDCWeKiAuwy86VXpfCgK",
+        "cust_name" : "Donita Mutya",
+        "dateTime" : "2021-10-28T00:55:21.283525",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MlLU9qfyZ0aj8X5UwyS",
+          "price" : 699.75,
+          "quantity" : 2,
+          "title" : "BHPC Poloshirt"
+        },{
+          "id" : "EUy23dwcZDzpKFL5TTFr",
+          "price" : 599.5,
+          "quantity" : 2,
+          "title" : "Strip Long Sleeve"
+        },{
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        } ]
+      },
+      "-Mn1fP3ODIAjamCPVrzA" : {
+        "amount" : 2749.20,
+        "cust_contactNumber" : "09265844562",
+        "cust_id" : "B4ahJwm2cSK3nL2bMdBq",
+        "cust_name" : "Benjamin Button",
+        "dateTime" : "2021-10-28T00:55:30.686545",
+        "isDone" : false,
+        "products" : [ {
+          "id" : "-MlAjz3EKEV8aNumGK6W",
+          "price" : 574.75,
+          "quantity" : 2,
+          "title" : "Red Tee"
+        }, {
+          "id" : "-MkwXMJHjtxhzH1EXeNe",
+          "price" : 899.95,
+          "quantity" : 1,
+          "title" : "Low-Waist Jeans"
+        },{
+          "id" : "-MlLU9qfyZ0aj8X5UwyS",
+          "price" : 699.75,
+          "quantity" : 1,
+          "title" : "BHPC Poloshirt"
+        }  ]
+      }
+    },
+    "jtUcM2RrUeOvIhk3NYs5D4bTiQN2" : {
+      "-MlPIX06cTvHOeX8DdhQ" : {
+        "amount" : 1663.75,
+        "cust_contactNumber" : "09271547896",
+        "cust_id" : "ekxVLbsAOHKUGnckZEhW",
+        "cust_name" : "Mercham Lokar",
+        "dateTime" : "2021-10-07T18:30:40.546222",
+        "products" : [ {
+          "id" : "-MlAjz3EKEV8aNumGK6W",
+          "price" : 574.75,
+          "quantity" : 1,
+          "title" : "Red Tee"
+        }, {
+          "id" : "-MlAk8-JAStTGJhhdjw6",
+          "price" : 259.75,
+          "quantity" : 1,
+          "title" : "Trouser"
+        }, {
+          "id" : "-MlAkMiLONJ43_hBaRC6",
+          "price" : 129.50,
+          "quantity" : 1,
+          "title" : "TankTops"
+        },{
+          "id" : "-MlLU9qfyZ0aj8X5UwyS",
+          "price" : 699.75,
+          "quantity" : 1,
+          "title" : "BHPC Poloshirt"
+        }  ],
+        
+        "isDOne" : false
+      },
+      "-MlPLNA7nemVI3BJOuGq" : {
+        "amount" : 2303.95,
+        "cust_contactNumber" : "09916587845",
+        "cust_id" : "EKeGbrkYJPNSdfiNICsR",
+        "cust_name" : "Freddie Smith",
+        "dateTime" : "2021-10-07T18:43:07.076690",
+        "products" : [ {
+          "id" : "-MlLU9qfyZ0aj8X5UwyS",
+          "price" : 699.75,
+          "quantity" : 1,
+          "title" : "BHPC Poloshirt"
+        }, {
+          "id" : "-MlAkMiLONJ43_hBaRC6",
+          "price" : 129.50,
+          "quantity" : 1,
+          "title" : "TankTops"
+        }, {
+          "id" : "-Ml6t6cfUG7Xv2MtiWnC",
+          "price" : 574.75,
+          "quantity" : 1,
+          "title" : "Red Tee"
+        }, {
+          "id" : "-MkwXMJHjtxhzH1EXeNe",
+          "price" : 899.95,
+          "quantity" : 1,
+          "title" : "Tattered Jeans"
+        } ],
+        "isDOne" : false
+      }
+    }
+  },
+  "products" : {
+    "-MkwXMJHjtxhzH1EXeNe" : {
+      "barcode" : "5Z0Oz0aNw92heGECTmrA",
+      "brand" : "Jag",
+      "category" : "Jeans",
+      "description" : "A Tattered low waist jeans for your outfit",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://bit.ly/3mHqVCA",
+      "maxQtyStore" : 25,
+      "minQtyStore" : 10,
+      "qtyCeiling" : 250,
+      "qtyOnHand" : 24,
+      "rack" : "Bottoms-Rack",
+      "rateItem" : 8,
+      "reOrderLevel" : 5,
+      "sellerId" : "jtUcM2RrUeOvIhk3NYs5D4bTiQN2",
+      "sellingPrice" : 899.95,
+      "shelf" : "Bc-J",
+      "smsCode" : "12",
+      "title" : "Tattered Jeans",
+      "unit" : "piece",
+      "weight" : "500g"
+    },
+    "-Ml6t6cfUG7Xv2MtiWnC" : {
+      "barcode" : "XVdBTf6KA1awlGW09dig",
+      "brand" : "Lee",
+      "category" : "Shirts",
+      "description" : "Gray Lee muscle fit t-shirt.",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://bit.ly/3ky0YCX",
+      "maxQtyStore" : 24,
+      "minQtyStore" : 12,
+      "qtyCeiling" : 36,
+      "qtyOnHand" : 16,
+      "rack" : "Tops-Rack",
+      "rateItem" : 8,
+      "reOrderLevel" : 5,
+      "sellerId" : "jtUcM2RrUeOvIhk3NYs5D4bTiQN2",
+      "sellingPrice" : 649.75,
+      "shelf" : "Tc-S",
+      "smsCode" : "35",
+      "title" : "Lee Tee",
+      "unit" : "piece",
+      "weight" : "190g"
+    },
+    "-MlAjz3EKEV8aNumGK6W" : {
+      "barcode" : "0yTBSKGJYyYTMXzG7g73",
+      "brand" : "Lee",
+      "category" : "Shirt",
+      "description" : "A red shirt - it is pretty red!",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg",
+      "maxQtyStore" : 24,
+      "minQtyStore" : 12,
+      "qtyCeiling" : 36,
+      "qtyOnHand" : 12,
+      "rack" : "Tops-Rack",
+      "rateItem" : 8,
+      "reOrderLevel" : 6,
+      "sellerId" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2",
+      "sellingPrice" : 574.75,
+      "shelf" : "Tc-S",
+      "smsCode" : "16",
+      "title" : "Red Tee",
+      "unit" : "piece",
+      "weight" : "120g"
+    },
+    "-MlAk8-JAStTGJhhdjw6" : {
+      "barcode" : "rN0T6Mae0r0PCt7Sl6Cc",
+      "brand" : "Trousey",
+      "category" : "Trouser",
+      "description" : "A nice pair of trousers.",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg",
+      "maxQtyStore" : 24,
+      "minQtyStore" : 12,
+      "qtyCeiling" : 36,
+      "qtyOnHand" : 12,
+      "rack" : "Bottoms-Rack",
+      "rateItem" : 9,
+      "reOrderLevel" : 10,
+      "sellerId" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2",
+      "sellingPrice" : 259.75,
+      "shelf" : "Bc-J",
+      "smsCode" : "23",
+      "title" : "Trouser",
+      "unit" : "piece",
+      "weight" : "90g"
+    },
+    "-MlAkMiLONJ43_hBaRC6" : {
+      "barcode" : "WK3RU1ITPdQMDlSxuZB2",
+      "brand" : "Bless",
+      "category" : "TankTops",
+      "description" : "A sleeveless tankTops - it is pretty great!",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://bit.ly/3gDkvko",
+      "maxQtyStore" : 24,
+      "minQtyStore" : 12,
+      "qtyCeiling" : 36,
+      "qtyOnHand" : 6,
+      "rack" : "Tops-Rack",
+      "rateItem" : 5,
+      "reOrderLevel" : 10,
+      "sellerId" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2",
+      "sellingPrice" : 129.5,
+      "shelf" : "Te-T",
+      "smsCode" : "62",
+      "title" : "TankTops",
+      "unit" : "piece",
+      "weight" : "60g"
+    },
+    "-MlAkUSd0RZC-8yDbwHV" : {
+      "barcode" : "EUy23dwcZDzpKFL5TTFr",
+      "brand" : "Cool",
+      "category" : "Shirts",
+      "description" : "A classy look for a classy guy.",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://bit.ly/38n3Htm",
+      "maxQtyStore" : 24,
+      "minQtyStore" : 12,
+      "qtyCeiling" : 24,
+      "qtyOnHand" : 6,
+      "rack" : "Tops-Rack",
+      "rateItem" : 9,
+      "reOrderLevel" : 10,
+      "sellerId" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2",
+      "sellingPrice" : 599.5,
+      "shelf" : "Tc-S",
+      "smsCode" : "14",
+      "title" : "Strip Long Sleeve",
+      "unit" : "piece",
+      "weight" : "115g"
+    },
+    "-MlLU9qfyZ0aj8X5UwyS" : {
+      "barcode" : "ki3Pqni9zbwYLI3fj1aS",
+      "brand" : "BeverlyHills Polo Club",
+      "category" : "SportShirt",
+      "description" : "HeatherBlue for your type of choice.",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://bit.ly/3zudSZ4",
+      "maxQtyStore" : 24,
+      "minQtyStore" : 12,
+      "qtyCeiling" : 24,
+      "qtyOnHand" : 6,
+      "rack" : "Tops-Rack",
+      "rateItem" : 9,
+      "reOrderLevel" : 10,
+      "sellerId" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2",
+      "sellingPrice" : 699.75,
+      "shelf" : "Tc-S",
+      "smsCode" : "09",
+      "title" : "BHPC Poloshirt",
+      "unit" : "piece",
+      "weight" : "135g"
+    },
+    "-MlLszoHvWek8_AOnjUQ" : {
+      "barcode" : "NvtZZILOZk3OoFvzxgSG",
+      "brand" : "JagThug",
+      "category" : "Shorts",
+      "description" : "100% Cotton Walking shorts",
+      "discountedPrice" : 0,
+      "imageUrl" : "https://bit.ly/3sTBHa5",
+      "maxQtyStore" : 36,
+      "minQtyStore" : 24,
+      "qtyCeiling" : 24,
+      "qtyOnHand" : 6,
+      "rack" : "Bottoms-Rack",
+      "rateItem" : 10,
+      "reOrderLevel" : 20,
+      "sellerId" : "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2",
+      "sellingPrice" : 1999.75,
+      "shelf" : "Be-S",
+      "smsCode" : "09",
+      "title" : "Bermuda Shorts",
+      "unit" : "piece",
+      "weight" : "185g"
+    }
+  },
+  "racks" : {
+    "HOGZIYZYKwF6licTkbNM" : {
+      "category" : "Clothing",
+      "order" : 3,
+      "title" : "Hats-Rack"
+    },
+    "nM7YhP6k5yyrhXvbJztv" : {
+      "category" : "Clothing",
+      "order" : 1,
+      "title" : "Tops-Rack"
+    },
+    "raABefXkyPAZaDyIaBpT" : {
+      "category" : "Clothing",
+      "order" : 2,
+      "title" : "Bottoms-Rack"
+    }
+  },
+  "topsShelf" : {
+    "3mXUGNSSJIzRlCABPxQq" : {
+      "code" : "Tf-T",
+      "items" : "Tube Top",
+      "order" : 1
+    },
+    "91kiLjGGf0rxZ7r4WoTM" : {
+      "code" : "Tb-C",
+      "items" : "Crop Top",
+      "order" : 2
+    },
+    "97hlfCyydX5tMwtNEQ6F" : {
+      "code" : "Ta-B",
+      "items" : "Blouse",
+      "order" : 3
+    },
+    "9Oqq334hjNlWGe2QnbUc" : {
+      "code" : "Tc-S",
+      "items" : "Shirts",
+      "order" : 4
+    },
+    "FMxVFqBgYtPhc2YdAJcY" : {
+      "code" : "Te-T",
+      "items" : "Tank Top",
+      "order" : 5
+    },
+    "vaxzeTsIntsyHibt81xR" : {
+      "code" : "Td-S",
+      "items" : "Sweater",
+      "order" : 6
+    }
+  },
+  "userFavorites" : {
+    "29yHjr3tv8Wo6Tj3FBhsm4SFaxM2" : {
+      "-MlAk8-JAStTGJhhdjw6" : false,
+      "-MlAkMiLONJ43_hBaRC6" : false,
+      "-MlAkUSd0RZC-8yDbwHV" : false,
+      "-MlLU9qfyZ0aj8X5UwyS" : true
+    },
+    "jtUcM2RrUeOvIhk3NYs5D4bTiQN2" : {
+      "-Ml6t6cfUG7Xv2MtiWnC" : false,
+      "-MlAjz3EKEV8aNumGK6W" : false,
+      "-MlAk8-JAStTGJhhdjw6" : false,
+      "-MlAkMiLONJ43_hBaRC6" : false,
+      "-MlAkUSd0RZC-8yDbwHV" : false
+    }
+  }
+}
