@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'dart:math';
 import 'package:garreta_picker_app/models/product.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +46,9 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
   bool _isDone = false;
   int? selectedIndex;
   List<bool> _isMatch = [];
+
+  int qtyOnhand = 0;
+  int newQtyOnHand = 0;
 
   Future? _obtainTopsData() async {
     return await Provider.of<Shelves>(context, listen: false)
@@ -153,7 +157,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
             // ignore: prefer_const_constructors
             ElevatedButton(
               onPressed: () {},
-              child: null,
+              child: const Text('Confirm Order Completion'),
             ),
           ],
         ),
@@ -338,7 +342,10 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                             width: 30,
                           ),
                           onTap: () {
-                            _showOkayDialog(productData[0].barcode!);
+                            _showOkayDialog(
+                                productData[0].qtyOnHand.toString());
+                            _newQtyOnHand(productData[0].qtyOnHand!,
+                                orderData!.products![index].quantity);
                             scanQRCode(productData[0].barcode!, index);
                           }),
                     ],
@@ -355,6 +362,10 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
     for (var i = 0; i < orderData!.products!.length; i++) {
       _isMatch.add(false);
     }
+  }
+
+  void _newQtyOnHand(int qtyOnhand, int orderedQtyOnhand) {
+    var newQtyOnHand = qtyOnhand - orderedQtyOnhand;
   }
 
   Future<void> scanQRCode(String code, int index) async {
@@ -380,6 +391,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
       );
 
       if (!mounted) return;
+
       if (code == scannedCode) {
         setState(() {
           _isMatch[index] = !_isMatch.elementAt(index);
