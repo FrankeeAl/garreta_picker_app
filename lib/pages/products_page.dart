@@ -23,15 +23,14 @@ class _ProductsPageState extends State<ProductsPage> {
   List<Products>? products;
 
   Future? _obtainProducts() async {
-    return await Provider.of<Products>(context, listen: false)
-        .fetchProducts()
-        .then((value) => setState(() {}));
+    return await Provider.of<Products>(context, listen: false).fetchProducts();
   }
 
   @override
   void initState() {
     if (mounted) {
       _productsFutures = _obtainProducts();
+      setState(() {});
     }
 
     super.initState();

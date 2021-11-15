@@ -28,18 +28,17 @@ class _CompletedOrdersPageState extends State<CompletedOrdersPage> {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            height: 200,
+            height: 300,
             width: size.width,
-            child: Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    'Completed Orders',
-                    style: Theme.of(context).textTheme.headline6,
-                  ),
-                  buildStream(size),
-                ],
-              ),
+            child: Column(
+              children: [
+                const SizedBox(height: 10),
+                Text(
+                  'Completed Orders',
+                  style: Theme.of(context).textTheme.bodyText2,
+                ),
+                buildStream(size),
+              ],
             ),
           ),
         ),
@@ -58,7 +57,7 @@ class _CompletedOrdersPageState extends State<CompletedOrdersPage> {
           tileList.addAll(completed.map((completedOrder) {
             return ListTile(
               leading: const Icon(
-                Icons.check_box_outline_blank_outlined,
+                Icons.check_box_outlined,
                 size: 30,
               ),
               title: Text(
@@ -67,11 +66,11 @@ class _CompletedOrdersPageState extends State<CompletedOrdersPage> {
               ),
               subtitle: Text(
                 completedOrder.custContactNumber,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline5,
               ),
               trailing: Text(
                 completedOrder.amount.toString(),
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline6,
               ),
             );
           }));
