@@ -10,7 +10,6 @@ import '../provider/shelves_provider.dart';
 import '../provider/orders_provider.dart';
 
 import '../widgets/order_detail_widget.dart';
-import '../widgets/order_item_widget.dart';
 
 import '../pages/main_page.dart';
 import '../pages/signin_page.dart';
@@ -19,7 +18,6 @@ import '../pages/products_page.dart';
 
 import '../models/auth.dart';
 import '../models/racks.dart';
-import '../models/shelf.dart';
 import '../unused/splash_screen.dart';
 import '../provider/product_provider.dart';
 
@@ -64,10 +62,6 @@ class MyApp extends StatelessWidget {
           create: (ctx) => Shelves(),
           child: const OrderDetailWidget(),
         ),
-        // ChangeNotifierProvider<Products>(
-        //   create: (ctx) => Products(),
-        //   child: const OrderDetailWidget(),
-        // ),
         ChangeNotifierProvider(
           create: (ctx) => Racks(),
           child: const OrderDetailWidget(),
@@ -80,6 +74,14 @@ class MyApp extends StatelessWidget {
             itemList == null ? [] : itemList.items,
           ),
         ),
+        ChangeNotifierProxyProvider<Auth, OrderList?>(
+            create: (_) => null,
+            update: (ctx, auth, itemList) => OrderList(
+                  auth.token,
+                  auth.userId,
+                  itemList == null ? [] : itemList.orders,
+                ),
+            child: const OrderDetailWidget()),
         ChangeNotifierProvider(
           create: (ctx) => Categories(),
           child: const ProductsPage(),

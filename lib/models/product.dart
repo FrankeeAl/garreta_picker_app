@@ -22,30 +22,31 @@ class Product with ChangeNotifier {
   final String? title;
   final String? unit;
   final String? weight;
+  bool isSelected = false;
 
-  Product({
-    this.id,
-    this.barcode,
-    this.brand,
-    this.category,
-    this.description,
-    this.discountedPrice,
-    this.imageUrl,
-    this.maxQtyStore,
-    this.minQtyStore,
-    this.qtyCeiling,
-    this.qtyOnHand,
-    this.rack,
-    this.rateItem,
-    this.reOrderLevel,
-    this.sellerId,
-    this.sellingPrice,
-    this.shelf,
-    this.smsCode,
-    this.title,
-    this.unit,
-    this.weight,
-  });
+  Product(
+      {this.id,
+      this.barcode,
+      this.brand,
+      this.category,
+      this.description,
+      this.discountedPrice,
+      this.imageUrl,
+      this.maxQtyStore,
+      this.minQtyStore,
+      this.qtyCeiling,
+      this.qtyOnHand,
+      this.rack,
+      this.rateItem,
+      this.reOrderLevel,
+      this.sellerId,
+      this.sellingPrice,
+      this.shelf,
+      this.smsCode,
+      this.title,
+      this.unit,
+      this.weight,
+      this.isSelected = false});
 
   factory Product.fromRTDB(Map<String, dynamic> json) {
     return Product(

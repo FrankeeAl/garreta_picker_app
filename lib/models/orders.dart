@@ -43,4 +43,13 @@ class Order {
           .toList(),
     );
   }
+  Map<String, dynamic> toJson() => {
+        "amount": amount,
+        "cust_contactNumber": number,
+        "cust_id": customerId,
+        "cust_name": name,
+        "dateTime": DateTime.now().toIso8601String(),
+        "isDone": true,
+        "products": List<dynamic>.from(products!.map((x) => x.toJson())),
+      };
 }

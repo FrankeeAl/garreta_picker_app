@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../models/product.dart';
 import '../provider/categories_provider.dart';
 import '../provider/product_provider.dart';
 
@@ -18,16 +17,15 @@ class ProductsPage extends StatefulWidget {
 
 class _ProductsPageState extends State<ProductsPage> {
   final _database = FirebaseDatabase.instance.reference();
+  static const productPath = 'products/';
   final key = GlobalKey<AnimatedListState>();
-  bool _isLoading = false;
   Future? _productsFutures;
+  List<Products>? products;
 
   Future? _obtainProducts() async {
     return await Provider.of<Products>(context, listen: false)
         .fetchProducts()
-        .then((value) => setState(() {
-              _isLoading = true;
-            }));
+        .then((value) => setState(() {}));
   }
 
   @override
@@ -37,6 +35,13 @@ class _ProductsPageState extends State<ProductsPage> {
     }
 
     super.initState();
+  }
+
+  void _activeListiners() {
+    _database.child(productPath).onValue.listen((event) {
+      final String isDone = event.snapshot.value;
+      setState(() {});
+    });
   }
 
   @override

@@ -95,7 +95,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
           ),
           onTap: () {
             Categories();
-            Navigator.of(context).pushReplacementNamed(
+            Navigator.of(context).pushNamed(
               OrderDetailWidget.routeName,
               arguments: widget.orders,
             );

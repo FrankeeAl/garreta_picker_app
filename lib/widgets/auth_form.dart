@@ -38,15 +38,15 @@ class _AuthFormWidgetState extends State<AuthFormWidget> {
   @override
   void initState() {
     super.initState();
-    emailController.addListener(
-      () {
-        setState(() {});
-      },
-    );
+    emailController.addListener(() {
+      setState(() {});
+    });
   }
 
   @override
   void dispose() {
+    emailController.dispose();
+
     super.dispose();
     //_controller!.dispose();
   }

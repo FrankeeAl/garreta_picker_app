@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
+import 'dart:convert';
 import 'dart:math';
-import 'package:garreta_picker_app/models/product.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -12,6 +13,7 @@ import '../models/orders.dart';
 import '../models/customer.dart';
 import '../models/racks.dart';
 import '../models/shelf.dart';
+import '../models/product.dart';
 
 import '../provider/product_provider.dart';
 import '../provider/shelves_provider.dart';
@@ -32,6 +34,10 @@ class OrderDetailWidget extends StatefulWidget {
 class _OrderDetailWidgetState extends State<OrderDetailWidget> {
   int pageIndex = 1;
   final _database = FirebaseDatabase.instance.reference();
+  static const ordersPath = 'orders/';
+  static const productsPath = 'products/';
+  static const userId = '29yHjr3tv8Wo6Tj3FBhsm4SFaxM2';
+  static const completedPath = 'completedOrders';
   static const racks = 'Product Racks';
   static const qtyLabel = 'Quantity';
 
@@ -44,11 +50,16 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
 
   String qrCode = 'code';
   bool _isDone = false;
-  int? selectedIndex;
   List<bool> _isMatch = [];
+  Product? _loadedProducts;
+  List<Product>? _updatedProducts = [];
 
   int qtyOnhand = 0;
   int newQtyOnHand = 0;
+  int newOrderLevel = 0;
+  int selectedIndex = 0;
+  List<bool> isSelected = [];
+  Product? updateProduct;
 
   Future? _obtainTopsData() async {
     return await Provider.of<Shelves>(context, listen: false)
@@ -82,7 +93,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
 
   @override
   void initState() {
-    if (!mounted) {
+    if (mounted) {
       setState(() {});
     }
     _getTopsFuture = _obtainTopsData();
@@ -98,19 +109,13 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
   void dispose() {
     // TODO: implement dispose
     _isMatch.clear();
+    isSelected.clear();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     orderData = ModalRoute.of(context)?.settings.arguments as Order;
-    _database
-        .child('customers/${orderData!.customerId}')
-        .onValue
-        .listen((event) {
-      final data = Map<String, dynamic>.from(event.snapshot.value);
-      customerDetails = Customer?.fromRTDB(data);
-    });
     _isSelected();
 
     final Size size = MediaQuery.of(context).size;
@@ -154,10 +159,17 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
               height: size.height * .5,
               child: buildOrderedProducts(size),
             ),
-            // ignore: prefer_const_constructors
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Confirm Order Completion'),
+            Center(
+              child: ElevatedButton(
+                onPressed: _isDone
+                    ? () {
+                        updateOrder();
+                        completedOrders(orderData!);
+                        removeOrder(orderData!.orderId!);
+                      }
+                    : null,
+                child: const Text('Confirm Order Completion'),
+              ),
             ),
           ],
         ),
@@ -260,9 +272,9 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
               width: 50,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
-                itemBuilder: (ctx, index) {
+                itemBuilder: (ctx, i) {
                   return CachedNetworkImage(
-                    imageUrl: productData![index].imageUrl!,
+                    imageUrl: productData[i].imageUrl!,
                     progressIndicatorBuilder:
                         (context, url, downloadProgress) =>
                             CircularProgressIndicator(
@@ -271,7 +283,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                         const Icon(Icons.error),
                   );
                 },
-                itemCount: productData!.length,
+                itemCount: productData.length,
               ),
             ),
             title: Row(
@@ -342,11 +354,15 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                             width: 30,
                           ),
                           onTap: () {
-                            _showOkayDialog(
-                                productData[0].qtyOnHand.toString());
-                            _newQtyOnHand(productData[0].qtyOnHand!,
-                                orderData!.products![index].quantity);
-                            scanQRCode(productData[0].barcode!, index);
+                            scanQRCode(
+                              productData,
+                              productData[0].barcode!,
+                              orderData!.products![index].quantity,
+                              productData[0].qtyOnHand!,
+                              productData[0].reOrderLevel!,
+                              index,
+                              productData[0].id!,
+                            );
                           }),
                     ],
                   ),
@@ -364,11 +380,74 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
     }
   }
 
-  void _newQtyOnHand(int qtyOnhand, int orderedQtyOnhand) {
-    var newQtyOnHand = qtyOnhand - orderedQtyOnhand;
+  int _newQtyOnHand(
+    List<Product>? products,
+    int currentQtyOnhand,
+    int orderedQtyOnhand,
+    int index,
+    String prodId,
+  ) {
+    var newQtyOnHand = currentQtyOnhand - orderedQtyOnhand;
+    this.newQtyOnHand = newQtyOnHand;
+
+    _database
+        .child(productsPath + orderData!.products![index].id!)
+        .update({'qtyOnHand': this.newQtyOnHand})
+        .then(
+          (value) => print('Updated successfully'),
+        )
+        .catchError(
+          (onError) => print('Something happened.'),
+        );
+
+    // print('${newQtyOnHand.toString()} is the new quantity onhand.');
+    // _showOkayDialog('$currentQtyOnhand + $orderedQtyOnhand new qty onhand...');
+    return this.newQtyOnHand;
   }
 
-  Future<void> scanQRCode(String code, int index) async {
+  int _newOrderLevel(
+    List<Product>? products,
+    int currentOrderLevel,
+    int recentOrderLevel,
+    int index,
+  ) {
+    var newOrderLevel = currentOrderLevel + recentOrderLevel;
+    this.newOrderLevel = newOrderLevel;
+
+    _database
+        .child(productsPath + orderData!.products![index].id!)
+        .update({'reOrderLevel': this.newOrderLevel})
+        .then(
+          (value) => print('Updated successfully'),
+        )
+        .catchError(
+          (onError) => print('Something happened.'),
+        );
+    // print('${this.newOrderLevel.toString()} is the loaded order level.');
+    // _showOkayDialog(
+    //     ' $currentOrderLevel + $recentOrderLevel   new order level...');
+    return this.newOrderLevel;
+  }
+
+  // void _updateProduct(String id, Product newProduct) {
+  //   final prodIndex =
+  //       _loadedProducts!.indexWhere((element) => element.id == id);
+  //   if (prodIndex >= 0) {
+  //     _updatedProducts![prodIndex] = newProduct;
+  //   } else {
+  //     _showErrorDialog('Failed to update product');
+  //   }
+  // }
+
+  Future<void> scanQRCode(
+    List<Product>? products,
+    String code,
+    int orderDataQty,
+    int productQty,
+    int orderLevel,
+    int index,
+    String id,
+  ) async {
     //Para ni sa continues scanning...
     // FlutterBarcodeScanner.getBarcodeStreamReceiver(
     //         "#ff6666", "Cancel", false, ScanMode.DEFAULT)!
@@ -391,21 +470,111 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
       );
 
       if (!mounted) return;
-
       if (code == scannedCode) {
+        _updateProduct(
+          id,
+          products![0],
+          _newQtyOnHand(products, productQty, orderDataQty, index, id),
+          _newOrderLevel(products, orderDataQty, orderLevel, index),
+        );
+
         setState(() {
           _isMatch[index] = !_isMatch.elementAt(index);
           qrCode = scannedCode;
-
+          _isDone = true;
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
         });
       } else {
-        _showErrorDialog('product dont matched code: $code');
+        _showErrorDialog('product dont matched code: $code + $scannedCode');
       }
     } on PlatformException {
       qrCode = 'Failed to get platform version.';
     } catch (e) {
       rethrow;
+    }
+  }
+
+  completedOrders(Order completedOrders) {
+    final order = <String, dynamic>{
+      "amount": completedOrders.amount,
+      "cust_contactNumber": completedOrders.number,
+      "cust_id": completedOrders.customerId,
+      "cust_name": completedOrders.name,
+      "dateTime": DateTime.now().toIso8601String(),
+      "isDone": true,
+      "products":
+          List<dynamic>.from(completedOrders.products!.map((x) => x.toJson())),
+    };
+
+    _database
+        .child(completedPath)
+        .push()
+        .set(order)
+        .then(
+          (value) => Navigator.pop(context),
+        )
+        .catchError(
+          (onError) => print('Something happened.'),
+        );
+  }
+
+  removeOrder(String orderId) {
+    _database
+        .child(ordersPath + orderId)
+        .remove()
+        .then((value) => print('order is completed...'))
+        .onError((error, stackTrace) => _showErrorDialog(error.toString()));
+  }
+
+  Future<void> _updateProduct(
+    String id,
+    Product updatedProduct,
+    int onHand,
+    int reOrder,
+  ) async {
+    var snackBar = const SnackBar(
+      content: Text('Successfuly updated!'),
+      elevation: 10,
+      duration: Duration(seconds: 3),
+    );
+
+    try {
+      await Provider.of<Products>(context, listen: false)
+          .updateProduct(id, updatedProduct, onHand, reOrder);
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    } catch (e) {
+      await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('${e.toString()} has happened.'),
+          content: const Text(
+            'Something unexpected happened.',
+          ),
+          actions: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Okay'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  Future<void> updateOrder() async {
+    var snackBar = const SnackBar(
+      content: Text('Successfuly updated!'),
+      elevation: 10,
+      duration: Duration(seconds: 3),
+    );
+    final ordersReference = _database.child(ordersPath + orderData!.orderId!);
+    try {
+      await ordersReference.update({'isDone': true});
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    } catch (e) {
+      _showErrorDialog(e.toString());
     }
   }
 
