@@ -14,7 +14,7 @@ class Auth extends ChangeNotifier {
 
   Timer? _authTimer;
 
-  static const _apiKey = 'AIzaSyB5t-2SXJrCeSPtw9L5fxEEI44iGya8Usc';
+  static const _apiKey = 'API_KEY';
   static const _signUp = 'signUp';
   static const _login = 'signInWithPassword';
 
