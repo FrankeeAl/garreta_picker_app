@@ -1,7 +1,4 @@
 import 'package:flutter/services.dart';
-import 'dart:convert';
-import 'dart:math';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -36,7 +33,6 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
   final _database = FirebaseDatabase.instance.reference();
   static const ordersPath = 'orders/';
   static const productsPath = 'products/';
-  static const userId = '29yHjr3tv8Wo6Tj3FBhsm4SFaxM2';
   static const completedPath = 'completedOrders';
   static const racks = 'Product Racks';
   static const qtyLabel = 'Quantity';

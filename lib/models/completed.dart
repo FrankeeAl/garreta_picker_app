@@ -18,28 +18,26 @@ class CompletedOrders {
   final String custName;
   final DateTime dateTime;
   final bool isDone;
-  final List<Product> products;
+  final List<OrderedProduct> products;
 
   factory CompletedOrders.fromRTDB(Map<String, dynamic> json) =>
       CompletedOrders(
-        amount: double.parse(json["amount"].toDouble()),
-        custContactNumber: json["cust_contactNumber"],
-        custId: json["cust_id"],
-        custName: json["cust_name"],
-        dateTime: DateTime.parse(json["dateTime"]),
-        isDone: json["isDone"],
-        products: List<Product>.from(
-          json["products"]
-              .map(
-                (item) => OrderedProduct(
-                  id: item['id'],
-                  title: item['title'],
-                  description: item['description'],
-                  price: item['price'],
-                  quantity: item['quantity'],
-                ),
-              )
-              .toList(),
-        ),
+        custId: json['cust_id'],
+        amount: json['amount'],
+        custContactNumber: json['cust_contactNumber'],
+        custName: json['cust_name'],
+        dateTime: DateTime.parse(json['dateTime']),
+        isDone: json['isDone'],
+        products: (json['products'] as List<dynamic>)
+            .map(
+              (item) => OrderedProduct(
+                id: item['id'],
+                title: item['title'],
+                description: item['description'],
+                price: item['price'],
+                quantity: item['quantity'],
+              ),
+            )
+            .toList(),
       );
 }
