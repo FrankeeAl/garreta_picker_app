@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:garreta_picker_app/models/order_stream.dart';
 
 import '../models/completed.dart';
+import '../models/order_stream.dart';
 
 class CompletedOrdersPage extends StatefulWidget {
   static const routeName = '/completed-orders-page';

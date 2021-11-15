@@ -9,16 +9,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../models/orders.dart';
 import '../models/customer.dart';
 import '../models/racks.dart';
-import '../models/shelf.dart';
 import '../models/product.dart';
 
 import '../provider/product_provider.dart';
 import '../provider/shelves_provider.dart';
-import '../pages/order_lists_page.dart';
 import '../pages/main_page.dart';
-
-import '../provider/customer_provider.dart';
-import '../provider/categories_provider.dart';
 
 class OrderDetailWidget extends StatefulWidget {
   const OrderDetailWidget({Key? key}) : super(key: key);

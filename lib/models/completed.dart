@@ -1,5 +1,4 @@
-import 'package:garreta_picker_app/models/product.dart';
-import 'package:garreta_picker_app/provider/product_provider.dart';
+import '../provider/product_provider.dart';
 
 class CompletedOrders {
   CompletedOrders({

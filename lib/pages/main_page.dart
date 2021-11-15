@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:garreta_picker_app/provider/product_provider.dart';
 import 'package:provider/provider.dart';
 import '../provider/merchant_provider.dart';
 

@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-
 class Merchant {
   final String? id;
   final String? title;

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:garreta_picker_app/models/http_exception.dart';
 
 import '../models/orders.dart';
+import '../models/http_exception.dart';
 
 import 'package:http/http.dart' as http;
 import 'product_provider.dart';

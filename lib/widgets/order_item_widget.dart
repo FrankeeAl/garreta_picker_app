@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:garreta_picker_app/provider/categories_provider.dart';
+
+import '../provider/categories_provider.dart';
 
 import '../models/orders.dart' as ord;
 import '../models/customer.dart';

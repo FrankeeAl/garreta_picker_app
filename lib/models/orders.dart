@@ -1,4 +1,5 @@
-import 'package:garreta_picker_app/provider/product_provider.dart';
+import '../provider/product_provider.dart';
+
 import 'package:intl/intl.dart';
 
 class Order {

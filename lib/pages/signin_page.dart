@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:garreta_picker_app/widgets/auth_form.dart';
 import 'package:lottie/lottie.dart';
+
+import '../widgets/auth_form.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
